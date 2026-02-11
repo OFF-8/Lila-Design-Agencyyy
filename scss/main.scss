@@ -27,7 +27,7 @@ main {
 .hero-scene {
   position: relative;
   margin-bottom: 15px;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -52,25 +52,25 @@ main {
     align-items: center;
     justify-content: center;
     padding: 20px; // ✅ Éviter que le texte touche les bords
-    
+
     // Tablette et plus
     @media (min-width: 768px) {
       height: 400px;
     }
-    
+
     p {
       font-size: 1rem; // Mobile
       margin-bottom: 10px;
-      
+
       @media (min-width: 768px) {
         font-size: 1.2rem;
       }
     }
-    
+
     h1 {
       font-size: 2rem; // Mobile
       margin-bottom: 20px;
-      
+
       @media (min-width: 768px) {
         font-size: 3rem;
       }
@@ -82,7 +82,7 @@ main {
   position: relative;
   overflow: hidden; // ✅ Éviter les débordements
   border-radius: 0.375rem; // Correspond au .rounded de Bootstrap
-  
+
   &:hover {
     .titre-image {
       opacity: 1;
@@ -109,12 +109,20 @@ main {
     font-weight: bold;
     text-align: center;
     width: 90%; // ✅ Éviter que le texte sorte
-    
+
     @media (min-width: 768px) {
       font-size: 1.5rem;
     }
+
+    .action-image-buttons {
+      background-color: red);
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+    }
   }
-}
 
   .titre-image {
     position: absolute;
