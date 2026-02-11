@@ -1,63 +1,88 @@
-<form class="col-12 col-md-8 col-lg-6 mx-auto pt-5">
-  <h3 class="mb-4">Mes informations</h3>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="mb-3">
-    <label for="nomInput" class="form-label">Nom</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nomInput"
-      placeholder="Nom"
-      required
-    />
-  </div>
+      <!-- ✅ Bootstrap depuis node_modules avec le bon chemin -->
+      <link
+        rel="stylesheet"
+        href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      />
 
-  <div class="mb-3">
-    <label for="PrenomInput" class="form-label">Prénom</label>
-    <input
-      type="text"
-      class="form-control"
-      id="PrenomInput"
-      placeholder="Prénom"
-      required
-    />
-  </div>
+      <!-- ✅ Votre CSS personnalisé -->
+      <link rel="stylesheet" href="../css/main.css" />
 
-  <div class="mb-3">
-    <label for="EmailInput" class="form-label">Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="EmailInput"
-      placeholder="Email"
-      required
-    />
-  </div>
+      <title>Lila Design Agency</title>
+    </head>
 
-  <div class="mb-3">
-    <label for="EmailInput" class="form-label">Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="EmailInput"
-      placeholder="Email"
-      required
-    />
-  </div>
+    <form class="col-12 col-md-8 col-lg-6 mx-auto pt-5">
+      <h3 class="mb-4">Mes informations</h3>
 
-  <div class="mb-3">
-    <label for="AdresselInput" class="form-label">Adresse complète </label>
-    <input
-      type="text"
-      class="form-control"
-      id="AdresseInput"
-      placeholder="Adresse"
-      required
-    />
-  </div>
+      <div class="mb-3">
+        <label for="nomInput" class="form-label">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nomInput"
+          placeholder="Nom"
+          required
+        />
+      </div>
 
-  <div class="mt-4 mb-5 gap-5 d-flex align-items-center">
-    <button type="submit" class="btn btn-primary">Enregistrer</button>
-    <a href="/editPassword">Cliquez ici pour modifier votre mot de passe</a>
-  </div>
-</form>
+      <div class="mb-3">
+        <label for="PrenomInput" class="form-label">Prénom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="PrenomInput"
+          placeholder="Prénom"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="EmailInput" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="EmailInput"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="EmailInput" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="EmailInput"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="AdresselInput" class="form-label">Adresse complète </label>
+        <input
+          type="text"
+          class="form-control"
+          id="AdresseInput"
+          placeholder="Adresse"
+          required
+        />
+      </div>
+
+      <div class="mt-4 mb-5 gap-5 d-flex align-items-center">
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="/editPassword">Cliquez ici pour modifier votre mot de passe</a>
+      </div>
+    </form>
+  </head>
+</html>

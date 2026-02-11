@@ -1,4 +1,4 @@
-@use "custom";
+@import "custom";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
 body {
@@ -14,12 +14,11 @@ body {
 }
 
 main {
-  flex: 1; // prend l’espace restant
+  flex: 1; // Prend l’espace restant
 }
 
 .footer {
   padding: 15px;
-
   background-color: #333;
   color: white;
 }
@@ -37,7 +36,7 @@ main {
     height: 100%;
     background-image: url(../images/Hero.jpg);
     background-size: cover;
-    background-position: center; // ✅ Centrer l'image
+    background-position: center;
     filter: brightness(0.3);
   }
 
@@ -51,9 +50,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px; // ✅ Éviter que le texte touche les bords
+    padding: 20px; // Pour éviter que le texte touche les bords
 
-    // Tablette et plus
     @media (min-width: 768px) {
       height: 400px;
     }
@@ -80,22 +78,18 @@ main {
 
 .image-card {
   position: relative;
-  overflow: hidden; // ✅ Éviter les débordements
-  border-radius: 0.375rem; // Correspond au .rounded de Bootstrap
-
   &:hover {
     .titre-image {
       opacity: 1;
     }
     img {
       filter: brightness(0.3);
-      transform: scale(1.05); // ✅ Effet zoom au survol
     }
   }
 
   img {
     transition: all 0.3s;
-    display: block; // ✅ Éviter l'espace sous l'image
+    
   }
 
   .titre-image {
@@ -105,30 +99,16 @@ main {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.3s;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    width: 90%; // ✅ Éviter que le texte sorte
+   }
 
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-
-    .action-image-buttons {
-      background-color: red);
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      gap: 5px;
-    }
-  }
-
-  .titre-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .action-image-buttons{
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between:
     opacity: 0;
     transition: all 0.3s;
   }

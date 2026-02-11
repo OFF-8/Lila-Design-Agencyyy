@@ -1,76 +1,100 @@
-<div class="hero-scene text-center text-white">
-  <div class="hero-scene-content">
-    <p>Des décors qui racontent votre histoire</p>
-    <h1>Inscription</h1>
-  </div>
-</div>
+<!doctype html>
+<html lang="fr">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="container">
-  <form class="col-12 col-md-8 col-lg-6 mx-auto pt-5">
-    <h3 class="mb-4">S'inscrire</h3>
-    <div class="mb-3">
-      <label for="NomInput" class="form-label">Nom</label>
-      <input
-        type="text"
-        class="form-control"
-        id="NomInput"
-        placeholder="Votre nom"
-        required
-      />
-    </div>
+    <!-- ✅ Bootstrap depuis node_modules avec le bon chemin -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    
+    <!-- ✅ Votre CSS personnalisé -->
+    <link rel="stylesheet" href="../css/main.css" />
+    
+    <title>Lila Design Agency</title>
+</head>
 
-    <div class="mb-3">
-      <label for="PrenomInput" class="form-label">Prénom</label>
-      <input
-        type="text"
-        class="form-control"
-        id="PrenomInput"
-        placeholder="Votre prénom"
-        required
-      />
+    <div class="hero-scene text-center text-white">
+      <div class="hero-scene-content">
+        <p>Des décors qui racontent votre histoire</p>
+        <h1>Inscription</h1>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label for="EmailInput" class="form-label">Email</label>
-      <input
-        type="email"
-        class="form-control"
-        id="EmailInput"
-        placeholder="Votre adresse email"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="PasswordInput" class="form-label">Mot de passe</label>
-      <input
-        type="password"
-        class="form-control"
-        id="PasswordInput"
-        placeholder="8 caractères minimum"
-        minlength="8"
-        required
-      />
-    </div>
+    <div class="container">
+      <form class="col-12 col-md-8 col-lg-6 mx-auto pt-5">
+        <h3 class="mb-4">S'inscrire</h3>
+        <div class="mb-3">
+          <label for="NomInput" class="form-label">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="NomInput"
+            placeholder="Votre nom"
+            required
+          />
+        </div>
 
-    <div class="mb-3">
-      <label for="ValidatePasswordInput" class="form-label"
-        >Confirmez votre mot de passe</label
-      >
-      <input
-        type="password"
-        class="form-control"
-        id="ValidatePasswordInput"
-        placeholder="8 caractères minimum"
-        minlength="8"
-        required
-      />
-    </div>
+        <div class="mb-3">
+          <label for="PrenomInput" class="form-label">Prénom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="PrenomInput"
+            placeholder="Votre prénom"
+            required
+          />
+        </div>
 
-    <div class="d-flex gap-5 align-items-center mb-5">
-      <button type="submit" class="btn btn-primary">Inscription</button>
-      <a href="/signin" class="text-decoration-none"
-        >Vous avez déjà un compte ? Connectez-vous ici !</a
-      >
+        <div class="mb-3">
+          <label for="EmailInput" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="EmailInput"
+            placeholder="Votre adresse email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="PasswordInput" class="form-label">Mot de passe</label>
+          <input
+            type="password"
+            class="form-control"
+            id="PasswordInput"
+            placeholder="8 caractères minimum"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="ValidatePasswordInput" class="form-label"
+            >Confirmez votre mot de passe</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="ValidatePasswordInput"
+            placeholder="8 caractères minimum"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <div class="d-flex gap-5 align-items-center mb-5">
+          <button type="submit" class="btn btn-primary">Inscription</button>
+          <a href="/signin" class="text-decoration-none"
+            >Vous avez déjà un compte ? Connectez-vous ici !</a
+          >
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </head>
+</html>
