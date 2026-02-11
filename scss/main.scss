@@ -27,6 +27,7 @@ main {
 .hero-scene {
   position: relative;
   margin-bottom: 15px;
+  
   &::before {
     content: "";
     position: absolute;
@@ -36,36 +37,65 @@ main {
     height: 100%;
     background-image: url(../images/Hero.jpg);
     background-size: cover;
+    background-position: center; // ✅ Centrer l'image
     filter: brightness(0.3);
   }
 
   * {
-    //Positionner les éléments devant le ::before
     position: relative;
   }
 
   .hero-scene-content {
-    height: 300px;
+    height: 250px; // Mobile
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px; // ✅ Éviter que le texte touche les bords
+    
+    // Tablette et plus
+    @media (min-width: 768px) {
+      height: 400px;
+    }
+    
+    p {
+      font-size: 1rem; // Mobile
+      margin-bottom: 10px;
+      
+      @media (min-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+    
+    h1 {
+      font-size: 2rem; // Mobile
+      margin-bottom: 20px;
+      
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
   }
 }
 
 .image-card {
   position: relative;
+  overflow: hidden; // ✅ Éviter les débordements
+  border-radius: 0.375rem; // Correspond au .rounded de Bootstrap
+  
   &:hover {
     .titre-image {
       opacity: 1;
     }
     img {
       filter: brightness(0.3);
+      transform: scale(1.05); // ✅ Effet zoom au survol
     }
   }
 
   img {
     transition: all 0.3s;
+    display: block; // ✅ Éviter l'espace sous l'image
   }
 
   .titre-image {
@@ -75,5 +105,27 @@ main {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 90%; // ✅ Éviter que le texte sorte
+    
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
+}
+
+  .titre-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+.form-label {
+  color: $primary;
 }
