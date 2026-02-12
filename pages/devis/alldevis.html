@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Bootstrap depuis node_modules avec le bon chemin -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    
+    <!-- ✅ Votre CSS personnalisé -->
+    <link rel="stylesheet" href="../css/main.css" />
+    
+    <title>Lila Design Agency</title>
+</head>
+<body>
+
+<div class="hero-scene text-center text-white">
+      <div class="hero-scene-content">
+        <p>Remplissez le formulaire et obtenez votre devis personnalisé</p>
+
+        <h1>Votre projet mérite le meilleur</h1>
+
+        <a href="/galerie" class="btn btn-primary">Galerie</a>
+      </div>
+    </div>
+    <div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow border-0">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Demande de devis</h2>
+          <form>
+            <div class="mb-3">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input type="text" id="prenom" class="form-control" placeholder="Votre prénom" required>
+            </div>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" id="nom" class="form-control" placeholder="Votre nom" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Votre e-mail" required>
+            </div>
+            <div class="mb-3">
+              <label for="telephone" class="form-label">Numéro de téléphone</label>
+              <input type="tel" id="telephone" class="form-control" placeholder="Votre numéro de téléphone" required pattern="^(\+33|0)[1-9](?:[\s.-]*\d{2}){4}$">
+              
+            </div>
+            <div class="mb-3">
+              <label for="type_evenement" class="form-label">Type d'évènement</label>
+              <select id="type_evenement" class="form-select" required>
+                <option value="">Sélectionnez...</option>
+                <option>Anniversaire</option>
+                <option>Mariage</option>
+                <option>Soirée</option>
+                <option>Conférence</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="date_evenement" class="form-label">Date de l'évènement</label>
+              <input type="date" id="date_evenement" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="lieu_evenement" class="form-label">Lieu de l'évènement</label>
+              <input type="text" id="lieu_evenement" class="form-control" placeholder="Lieu de l'évènement" required>
+            </div>
+            <div class="mb-3">
+              <label for="nombre_invites" class="form-label">Nombre d'invités</label>
+              <input type="number" id="nombre_invites" class="form-control" min="1" step="1" placeholder="Estimé ou précis" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description du projet</label>
+              <textarea id="description" class="form-control" rows="4" placeholder="Décrivez votre projet..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="budget" class="form-label">Budget estimé (€)</label>
+              <input type="number" id="budget" class="form-control" min="0" step="100" placeholder="Votre budget en euros" required>
+              <div class="form-text">Entrez un montant précis ou une estimation.</div>
+            </div>
+            <a href="/indevis" class="btn btn-primary w-100">Envoyer la demande</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+    </html>
